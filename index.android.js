@@ -1,10 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
+import { Button } from 'nachos-ui';
 import {
   AppRegistry,
   StyleSheet,
@@ -26,6 +21,7 @@ export default class schoolphotoapp extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Button>Button</Button>
       </View>
     );
   }
