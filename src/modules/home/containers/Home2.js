@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Button } from 'nachos-ui'
+
 import {
   StyleSheet,
   Text,
@@ -7,10 +9,28 @@ import {
 
 class HomeScrenn extends Component {
   
+  static navigatorStyle = {
+    topBarBorderColor: 'red',
+    topBarBorderWidth: 5.5,
+  };
+
+  constructor(props) {
+    super(props);
+    this.nextScreen = this.nextScreen.bind(this);
+    this.nextScreen2 = this.nextScreen2.bind(this);
+  }
+
   nextScreen() {
     this.props.navigator.push({
-      screen: 'example.PushedScreen',
-      title: 'Pushed Screen'
+      screen: 'schoolphotoapp.homescreen',      
+      title: 'Home Screen'
+    });
+  }
+
+  nextScreen2() {
+    this.props.navigator.push({
+      screen: 'schoolphotoapp.homes3',      
+      title: 'Home Screen'
     });
   }
 
@@ -20,7 +40,12 @@ class HomeScrenn extends Component {
         <Text style={styles.welcome}>
           Home 2
         </Text>
-        
+        <Button kind='squared' type='success' onPress={this.nextScreen}>
+          navegar
+        </Button>
+        <Button kind='squared' type='success' onPress={this.nextScreen2}>
+          navegar 2 
+        </Button>
       </View>
     );
   }

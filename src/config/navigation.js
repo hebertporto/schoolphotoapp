@@ -12,24 +12,13 @@ const theme = {
   tabFontFamily: 14
 }
 
-const screen = [
-  {
-    title: 'Home Screen',
+const initialScreen = {
+  screen: {
     screen: 'schoolphotoapp.homescreen',
+    title: 'Navigation Bootstrap',
   }
-]
-
-export const tabBasedAppParams = {
-  screen,
-  animationType: 'fade',
-  appStyle: theme
 }
 
 export function startApp () {
-  Navigation.startSingleScreenApp({
-    screen: {
-      screen: 'schoolphotoapp.homescreen',
-      title: 'Navigation Bootstrap'
-    }
-  });
+  Navigation.startSingleScreenApp(initialScreen);
 }

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
+import { Button } from 'nachos-ui'
+
 import {
   StyleSheet,
   Text,
   View
 } from 'react-native';
-import { Button } from 'nachos-ui'
 
 class HomeScrenn extends Component {
+  
   static navigatorStyle = {
     navBarHidden: true,
   };
@@ -18,8 +20,8 @@ class HomeScrenn extends Component {
 
   nextScreen() {
     this.props.navigator.push({
-      screen: 'schoolphotoapp.homes2',
-      title: 'Pushed Screen'
+      screen: 'schoolphotoapp.homescreen',      
+      title: 'Home Screen'
     });
   }
 
@@ -27,18 +29,11 @@ class HomeScrenn extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Configurado Boladão
+          Home 3
         </Text>
         <Button kind='squared' type='success' onPress={this.nextScreen}>
-          navegar
+          Home Screen
         </Button>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press RR to reload,{'\n'}
-          Cmd+M for dev menu
-        </Text>
       </View>
     );
   }
