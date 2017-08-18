@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Button } from 'nachos-ui';
+import React, {Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import {Navigation} from 'react-native-navigation';
 
-export default class schoolphotoapp extends Component {
+class react_native_navigation_bootstrap extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -18,10 +18,9 @@ export default class schoolphotoapp extends Component {
           To get started, edit index.android.js
         </Text>
         <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+          Press RR to reload,{'\n'}
+          Cmd+M for dev menu
         </Text>
-        <Button>Button</Button>
       </View>
     );
   }
@@ -46,4 +45,10 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('schoolphotoapp', () => schoolphotoapp);
+Navigation.registerComponent('react-native-navigation-bootstrap', () => react_native_navigation_bootstrap);
+Navigation.startSingleScreenApp({
+  screen: {
+    screen: 'react-native-navigation-bootstrap',
+    title: 'Navigation Bootstrap'
+  }
+});
