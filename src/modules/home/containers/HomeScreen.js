@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  ImageBackground
 } from 'react-native';
 import { Button } from 'nachos-ui'
 
@@ -26,40 +27,58 @@ class HomeScrenn extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Configurado Boladão
-        </Text>
-        <Button kind='squared' type='success' onPress={this.nextScreen}>
-          navegar
-        </Button>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press RR to reload,{'\n'}
-          Cmd+M for dev menu
-        </Text>
+        <ImageBackground
+          style={styles.imageContainer}
+          source={{uri: 'http://lorempixel.com/400/800/'}}
+        >
+          <View style={styles.firstSection}>
+            <Text style={styles.welcome}>
+              Configurado Boladão asdasd sad as das das 123 asd asd asd asd s eqwe x zzxx
+            </Text>
+          </View>
+          <View style={styles.secondSection}>
+            <Button type='success' onPress={this.nextScreen}>
+              Home Screen
+            </Button>
+            <Button type='success' onPress={this.nextScreen}>
+              Home Screen
+            </Button>
+          </View>
+        </ImageBackground>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  imageContainer: {
+    flex: 1, 
+    width: null, 
+    height: null, 
+    ...StyleSheet.absoluteFillObject,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  },
+  firstSection: {
+    flex: 2,
+    justifyContent: 'center',
+    
+  },
+  secondSection: {
+    flex: 1,
+    width: '100%',
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+  btnStyle: { margin: 15 },
+  container: {
+    flex: 1,
   },
   welcome: {
+    height: 30,
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    color: '#FFFFFF',
   },
 });
 
