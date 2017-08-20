@@ -21,6 +21,7 @@ class HomeScrenn extends Component {
   nextScreen() {
     this.props.navigator.push({
       screen: 'home',
+      title: 'My Travels',
       backButtonHidden: true,
     });
   }
