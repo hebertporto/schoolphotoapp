@@ -29,19 +29,16 @@ class HomeScrenn extends Component {
       <View style={styles.container}>
         <ImageBackground
           style={styles.imageContainer}
-          source={{uri: 'http://lorempixel.com/400/800/'}}
+          source={require('./../../../assets/images/bck-app.jpg')}
         >
           <View style={styles.firstSection}>
             <Text style={styles.welcome}>
-              Configurado Boladão asdasd sad as das das 123 asd asd asd asd s eqwe x zzxx
+             My Travel Journey
             </Text>
           </View>
           <View style={styles.secondSection}>
             <Button type='success' onPress={this.nextScreen}>
-              Home Screen
-            </Button>
-            <Button type='success' onPress={this.nextScreen}>
-              Home Screen
+              LOGIN
             </Button>
           </View>
         </ImageBackground>
