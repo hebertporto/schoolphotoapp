@@ -14,8 +14,7 @@ const theme = {
 
 const initialScreen = {
   screen: {
-    screen: 'schoolphotoapp.homescreen',
-    title: 'Navigation Bootstrap',
+    screen: 'login'
   }
 }
 
