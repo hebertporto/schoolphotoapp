@@ -37,6 +37,18 @@ class HomeScrenn extends Component {
             </Text>
           </View>
           <View style={styles.secondSection}>
+            <Input
+              style={inputStyle}
+              placeholder='Your name'
+              value={this.state.value}
+              onChangeText={value => this.setState({ value })}
+            />
+            <Input
+              style={inputStyle}
+              placeholder='Your name'
+              value={this.state.value}
+              onChangeText={value => this.setState({ value })}
+            />
             <Button type='success' onPress={this.nextScreen}>
               LOGIN
             </Button>
@@ -49,9 +61,9 @@ class HomeScrenn extends Component {
 
 const styles = StyleSheet.create({
   imageContainer: {
-    flex: 1, 
-    width: null, 
-    height: null, 
+    flex: 1,
+    width: null,
+    height: null,
     ...StyleSheet.absoluteFillObject,
     flexDirection: 'column',
     justifyContent: 'center',
@@ -60,7 +72,7 @@ const styles = StyleSheet.create({
   firstSection: {
     flex: 2,
     justifyContent: 'center',
-    
+
   },
   secondSection: {
     flex: 1,
